@@ -1,0 +1,16 @@
+.letter-form {
+	padding: 40px;
+	-webkit-box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.75);
+	background-color: #ddd;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+
+	.main-info {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+}
