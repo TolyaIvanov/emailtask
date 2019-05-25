@@ -24,7 +24,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	resetInputValue: (value) => dispatch(changeInputValue(value)),
+	resetInputValue: (evt) => dispatch(changeInputValue(evt.target.value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(InputContainer);

@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {
-	handleTextareaHeight,
-} from "../../actions/form/input";
+	changeTextareaHeight,
+} from "../../actions/form/actionCreator";
 
 import Textarea from './../../components/form/Textarea';
 
@@ -12,7 +12,7 @@ class TextareaContainer extends React.Component {
 		return (
 			<Textarea
 				placeholder={this.props.placeholder}
-				changeHeight={this.props.changeTextareaHeight(this.props.textareaHeight)}
+				changeHeight={this.props.changeTextareaHeight}
 				value={this.props.value}
 			/>
 		)
@@ -24,7 +24,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	changeTextareaHeight: (element) => dispatch(handleTextareaHeight(element))
+	changeTextareaHeight: (element) => dispatch(changeTextareaHeight(element))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TextareaContainer);
