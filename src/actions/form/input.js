@@ -1,21 +1,26 @@
-import React from 'react';
-
 import {
 	changeInputValue,
 	changeTextareaHeight
 } from "./actionCreator";
 
-export const handleTextareaHeight = (el) => {
+export const handleTextareaHeight = (event, minRows, maxRows) => {
 	return (dispatch) => {
-		let splittedValue = el.value.replace(/[<>]/g, '_').split("\n");
-		let text = [];
+		const textareaLineHeight = 24;
+		const previousRows = event.target.rows;
+		
+		event.target.rows = minRows;
 
-		splittedValue.map((str) => {
-			text.push(<div>{str.replace(/\s\s/g, '&nbsp;')}&nbsp;</div>);
+		const currentRows = ~~(event.target.scrollHeight / textareaLineHeight);
 
-			return text;
-		});
+		if (currentRows === previousRows) {
+			event.target.rows = currentRows;
+		}
 
-		dispatch(changeTextareaHeight(el.value, text));
+		if (currentRows >= maxRows) {
+			event.target.rows = maxRows;
+			event.target.scrollTop = event.target.scrollHeight;
+		}
+
+		dispatch(changeTextareaHeight(event.target.value, currentRows));
 	}
 };

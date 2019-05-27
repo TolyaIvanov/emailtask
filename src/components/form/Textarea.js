@@ -1,5 +1,11 @@
 import React from 'react';
 
+import {
+	TEXTAREA_MAX_ROWS,
+	TEXTAREA_MIN_ROWS,
+} from "../../constants/constants";
+
+
 class Textarea extends React.Component {
 	render() {
 		return (
@@ -8,16 +14,11 @@ class Textarea extends React.Component {
 					value={this.props.inputValue}
 					className={'letter-message'}
 					placeholder={this.props.placeholder}
-					onInput={(e) => {
-						this.props.changeHeight(e.target)
+					onInput={(event) => {
+						this.props.changeHeight(event, TEXTAREA_MIN_ROWS, TEXTAREA_MAX_ROWS)
 					}}
-					style={{height: this.hiddenDiv && this.hiddenDiv.offsetHeight}}
+					rows={this.props.rows}
 				/>
-				<div className={'textarea-hidden-div'}
-				     ref={div => this.hiddenDiv = div}
-				>
-					{this.props.hiddenDivText}
-				</div>
 			</div>
 		);
 	}

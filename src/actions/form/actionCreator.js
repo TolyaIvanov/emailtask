@@ -8,8 +8,8 @@ export const changeInputValue = value => ({
 	value,
 });
 
-export const changeTextareaHeight = (value, hiddenDivText) => ({
+export const changeTextareaHeight = (value, currentRows) => ({
 	type: TEXTAREA_CHANGING,
 	value,
-	hiddenDivText,
+	currentRows,
 });
