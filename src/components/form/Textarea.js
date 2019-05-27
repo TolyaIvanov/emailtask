@@ -5,12 +5,19 @@ class Textarea extends React.Component {
 		return (
 			<div className={'input-wrapper'}>
 				<textarea
-					value={this.props.value}
+					value={this.props.inputValue}
 					className={'letter-message'}
 					placeholder={this.props.placeholder}
-					onInput={this.props.changeHeight}
+					onInput={(e) => {
+						this.props.changeHeight(e.target)
+					}}
+					style={{height: this.hiddenDiv && this.hiddenDiv.offsetHeight}}
 				/>
-				<div className={'textarea-hidden-div'}></div>
+				<div className={'textarea-hidden-div'}
+				     ref={div => this.hiddenDiv = div}
+				>
+					{this.props.hiddenDivText}
+				</div>
 			</div>
 		);
 	}

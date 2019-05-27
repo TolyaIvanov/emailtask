@@ -1,5 +1,9 @@
 //input constants
 export const INPUT_CHANGING = 'INPUT_CHANGING';
 export const TEXTAREA_CHANGING = 'TEXTAREA_CHANGING';
+export const TEXTAREA_HEIGHT_INCREASE = 'TEXTAREA_HEIGHT_INCREASE';
+export const TEXTAREA_HEIGHT_DECREASE = 'TEXTAREA_HEIGHT_DECREASE';
 
+//font size const
+export const TEXTAREA_TEXT_HEIGHT = 16;
 

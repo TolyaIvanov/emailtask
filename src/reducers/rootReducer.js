@@ -1,9 +1,16 @@
 import {combineReducers} from "redux";
 
-import {changeInput} from './form/input'
+import {
+	changeInput,
+} from './form/input'
+
+import {
+	changeTextarea
+} from './form/textarea'
 
 export default combineReducers({
 	changeInput,
+	changeTextarea,
 });
 
 // тема письма,
