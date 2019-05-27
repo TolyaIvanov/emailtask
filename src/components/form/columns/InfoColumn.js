@@ -4,13 +4,15 @@ import InputContainer from './../../../containers/form/InputContainer';
 import TextareaContainer from './../../../containers/form/TextareaContainer';
 
 const InfoColumn = () => (
-	<div className="main-info">
-		<InputContainer
-			placeholder={'Введите тему письма'}
-		/>
-		<TextareaContainer
-			placeholder={'Введите сообщение для пользователя'}
-		/>
+	<div className="letter-info">
+		<div className="inputs info">
+			<InputContainer
+				placeholder={'Тема письма'}
+			/>
+			<TextareaContainer
+				placeholder={'Сообщение для пользователя'}
+			/>
+		</div>
 	</div>
 );
 
