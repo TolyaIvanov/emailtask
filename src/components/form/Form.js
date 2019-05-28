@@ -13,8 +13,8 @@ class Form extends React.Component {
 				<SenderColumn/>
 				<AddresseeColumn/>
 				<InfoColumn/>
-				<SendButton/>
 				<FileDropzone/>
+				<SendButton/>
 			</div>
 		);
 	}
