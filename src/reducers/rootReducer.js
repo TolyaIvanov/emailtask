@@ -1,16 +1,21 @@
 import {combineReducers} from "redux";
 
 import {
-	changeInput,
+	validateInput,
 } from './form/input'
 
 import {
 	changeTextarea
 } from './form/textarea'
 
+import {
+	fetchRequestList
+} from "./requestsInfo/requests";
+
 export default combineReducers({
-	changeInput,
+	validateInput,
 	changeTextarea,
+	fetchRequestList,
 });
 
 // тема письма,

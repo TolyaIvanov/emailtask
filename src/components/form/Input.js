@@ -13,7 +13,7 @@ class Input extends React.Component {
 					type={'text'}
 					className={'letter-input'}
 					placeholder={this.props.placeholder}
-					onInput={this.props.changeValue}
+					onInput={this.props.handleInputValue}
 					value={this.props.value}
 				/>
 			</div>

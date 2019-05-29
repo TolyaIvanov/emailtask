@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {
-	changeInputValue,
+	inputValue,
 } from "../../actions/form/actionCreator";
 
 import Input from './../../components/form/Input';
@@ -12,19 +12,20 @@ class InputContainer extends React.Component {
 		return (
 			<Input
 				placeholder={this.props.placeholder}
-				changeValue={this.props.resetInputValue}
+				changeValue={this.props.validateInput}
 				value={this.props.value}
+				changeInput={this.props.handleInputValue}
 			/>
 		)
 	}
 }
 
 const mapStateToProps = (state) => ({
-	inputValue: state.changeInput,
+	inputValue: state.validateInput,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	resetInputValue: (evt) => dispatch(changeInputValue(evt.target.value)),
+	handleInputValue: (evt) => dispatch(inputValue(evt.target.value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(InputContainer);

@@ -9,3 +9,12 @@ export const MAX_FILE_SIZE = 5242880;   // 5 mb
 export const MAX_ALL_SIZE = 20971520;   // 20 mb
 
 export const SEND_INFO = 'SEND_INFO';
+
+export const SEND_REQUEST = 'SEND_REQUEST';
+export const PUSH_TO_LIST = 'PUSH_TO_LIST';
+
+export const INPUTS_WITH_ERROR = 'INPUTS_WITH_ERROR';
+
+export const REQUEST_IS_LOADING = 'REQUEST_IS_LOADING';
+export const REQUEST_HAS_ERRORED = 'REQUEST_HAS_ERRORED';
+export const REQUEST_IS_ACCEPTED = 'REQUEST_IS_ACCEPTED';

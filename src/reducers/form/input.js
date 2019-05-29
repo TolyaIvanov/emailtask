@@ -2,7 +2,7 @@ import {
 	INPUT_CHANGING,
 } from "../../constants/constants";
 
-export const changeInput = (state = [], {type, value}) => {
+export const validateInput = (state = [], {type, value}) => {
 	switch (type) {
 		case INPUT_CHANGING:
 			return [
